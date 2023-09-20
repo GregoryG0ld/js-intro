@@ -15,3 +15,5 @@ const exp3 = 2 ** 2;
 // ** - Laipsnis
 
 console.log(exp1, exp2, exp3);
+
+console.log(123);

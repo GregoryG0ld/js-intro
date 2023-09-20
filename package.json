@@ -2,8 +2,9 @@
   "name": "js-intro",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./js/script.js",
   "scripts": {
+    "dev": "nodemon ./js/scripts.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
