@@ -2,18 +2,48 @@
 const num1 = 5;
 const num2 = 7;
 
-const result = num1 + num2;
-console.log(result);
+// Operation Addition
+const sum = num1 + num2;
+console.log(sum);
 
-const diff = num1 - num2;
-console.log(diff);
+// Operation Subtraction
+const sub = num1 - num2;
+console.log(sub);
 
-const exp1 = 2 + 2;
-const exp2 = 2 * 2;
-const exp3 = 2 ** 2;
+// Operation Multiplication
+const mult = num1 * num2;
+console.log(mult);
 
-// ** - Laipsnis
+// Operation div
+const div = num1 / num2;
+console.log(div);
 
-console.log(exp1, exp2, exp3);
+// Modulus (Remainder)
+const modResult = 7 % 5;
+console.log(modResult);
 
-console.log(123);
+// Operation Exponentiation
+const exp = num1 ** num2;
+console.log(exp);
+
+// Divide by Zero
+
+const zero = 0;
+
+const result1 = 1 / zero;  // Infinity 
+const result2 = -1 / zero;  // -Infinity 
+
+console.log(result1, result2);
+
+//Float Digits Multiply 
+const n1 = 0.39;
+const n2 = 0.22;
+
+console.log(n1 * n2);
+
+//Not precise result due to the way floating-point numbers are stored and the limitations of binary representation.
+
+const n3 = 0.2;
+const n4 = 0.2;
+
+console.log(n3 * n4); // 0.04000000000000001
