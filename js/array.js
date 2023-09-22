@@ -57,7 +57,7 @@ console.log('Studento pazymiu vidurkis yra' + ' ' + evalMiddle2);
 // Suformuojat sakini:
 // "Mano aplankytos vietos: Vieta1, Vieta2, Vieta3."
 
-var cities = ["New York", "Los Angeles", "London", "Paris", "Tokyo"];
+const cities = ["New York", "Los Angeles", "London", "Paris", "Tokyo"];
 
-var formattedCities = cities.join(', ');
+const formattedCities = cities.join(', ');
 console.log(`Mano aplankytos vietos ${formattedCities}`);
