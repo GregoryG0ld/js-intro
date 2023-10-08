@@ -4,7 +4,15 @@
   "description": "",
   "main": "script.js",
   "scripts": {
+    "chal3": "nodemon ./fridaychallenge/challenge1-3.js",
+    "chal2": "nodemon ./fridaychallenge/challenge1-2.js",
+    "chal1": "nodemon ./fridaychallenge/challenge1-1.js",
+    "method:array": "nodemon ./method/array.js",
+    "vardas": "nodemon ./uzd/vardas.js",
+    "func": "nodemon ./functions/function.js",
+    "object": "nodemon ./js/object.js",
     "array": "nodemon ./js/array.js",
+    "number": "nodemon ./js/number.js",
     "string": "nodemon ./js/string.js",
     "dev": "nodemon ./js/scripts.js",
     "test": "echo \"Error: no test specified\" && exit 1"
