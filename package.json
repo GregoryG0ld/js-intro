@@ -4,9 +4,10 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "chal3": "nodemon ./fridaychallenge/challenge1-3.js",
-    "chal2": "nodemon ./fridaychallenge/challenge1-2.js",
-    "chal1": "nodemon ./fridaychallenge/challenge1-1.js",
+    "c4": "nodemon ./fridaychallenge/challenge4.js",
+    "c3": "nodemon ./fridaychallenge/challenge3.js",
+    "c2": "nodemon ./fridaychallenge/challenge2.js",
+    "c1": "nodemon ./fridaychallenge/challenge1.js",
     "uzd:pazymiai": "nodemon ./uzd/pazymiai.js",
     "uzd:vardas": "nodemon ./uzd/vardas.js",
     "uzd:tarpai": "nodemon ./uzd/tarpai.js",
