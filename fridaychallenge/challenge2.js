@@ -5,7 +5,7 @@
 // 1. Išspausdinkite gražią išvestį į konsole ar terminalą, nurodydami, kas turi didesnį KMI. Žinutė yra arba "Marko KMI didesnis nei Jono!" arba "Jono KMI yra didesnis nei Marko!"
 
 // 2. Naudokite Template literals, kad įtrauktumėte KMI reikšmes į išvestis. Pavyzdys: „Marko KMI (28,3) yra didesnis nei Jono (23,9)!
-
+ 
 console.clear();
 
 // 1. Išsaugokite Marko ir Jono masę ir ūgį kintamaisiais

@@ -61,50 +61,52 @@ console.log(looksLikeName('Eg1e'), false);
 console.log(looksLikeName('Egl3'), false);
 console.log(looksLikeName('Eg_le'), false);
 
-
 console.clear();
 
 function isName(name) {
    if (typeof name !== 'string') {
-      return 'Klaida: netinkamas duomens tipas, privalo buti string". ';
+      return 'Klaida: netinkamas duomens tipas, privalo buti "string".';
    }
 
-   const nameMinLenght = 2;
-   if (name.length < nameMinLenght) {
-      return `Klaida: per trumpas vardas. Reikalingi min ${nameMinLenght} simboliai". `;
+   const nameMinLength = 2;
+   if (name.length < nameMinLength) {
+      return `Klaida: per trumpas vardas; minimum ${nameMinLength} simboliai`;
    }
 
-   const nameMaxLenght = 20;
-   if (name.length > nameMaxLenght) {
-      return `Klaida: per ilgas vardas. Reikalingi max ${nameMaxLenght} simboliai". `;
+   const nameMaxLength = 20;
+   if (name.length > nameMaxLength) {
+      return `Klaida: per ilgas vardas; maximum ${nameMaxLength} simboliu`;
    }
 
    const pirmaRaide = name[0];
    if (pirmaRaide.toUpperCase() !== pirmaRaide) {
-      return 'Klaida: pirma reide privalo buti didžioji';
+      return 'Klaida: pirma raide privalo buti didzioji';
    }
 
    const likusiosRaides = name.slice(1);
    if (likusiosRaides.toLowerCase() !== likusiosRaides) {
-      return 'Klaida: likusios (apart pirmosisos) raides privalo buti mazi';
+      return 'Klaida: likusios (apart pirmos) raides privalo buti mazosios';
    }
 
-   const abc = 'qwertyuiopasdfghjklzxcvbnm';
-   const nameToLowercase = name.toLowerCase();
+   // turime leistinu simboliu sarasa
+   const abc = 'abcdefghijklmnopqrstuvwxyz';
+   const nameLowercase = name.toLowerCase();
+
+   // einu per vardo raides
+   //      pasiimu viena is vardo raidziu
+   //      patikrinu ar ta raide yra leistinu simboliu sarase
+   //          jei yra - tesiam darba
+   //          jei nera - viskas, radau klaida, baigiam darba
 
    for (let i = 0; i < name.length; i++) {
-      const raide = nameToLowercase[i];
-      if (abc.includes(raide)) {
+      const raide = nameLowercase[i];
 
-      } else {
+      if (!abc.includes(raide)) {
          return `Klaida: neleistinas simbolis varde "${raide}"`;
       }
-
-
    }
 
    return 'Ok';
-
 }
 
 console.log(isName());
@@ -119,15 +121,28 @@ console.log(isName([]));
 console.log(isName({}));
 console.log(isName(isName));
 
-
 console.log(isName(''));
 console.log(isName('L'));
-console.log(isName('Liiiiiiiiiiiiiiiiiiiiii'));
+console.log(isName('Liiiiiiiiiiiiiiiiiiii'));
+
 console.log(isName('maryte'));
 console.log(isName('ona'));
+console.log(isName('petras'));
 
-console.log(isName('Mar1te'));
+console.log(isName('MarYte'));
+console.log(isName('OnA'));
+console.log(isName('PEtras'));
+
+console.log(isName('Mar9te'));
+console.log(isName('On4'));
+console.log(isName('P3tras'));
+console.log(isName('J nas'));
 console.log(isName('9onas'));
+console.log(isName('!bile'));
+console.log(isName(' bile'));
 
 console.log(isName('Li'));
+console.log(isName('Liiiiiiiiiiiiiiiiiii'));
 console.log(isName('Jonas'));
+
+console.log(isName('555555555555555555555555555555555'));

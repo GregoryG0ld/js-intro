@@ -41,5 +41,3 @@ if (markHigherBMI) {
 } else {
    console.log("Jono KMI didesnis nei Marko.");
 }
-
-
