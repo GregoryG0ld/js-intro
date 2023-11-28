@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <!-- 7. Parašykite funkciją, kurios parametras būtų tekstas, kuris yra įterpiamas į h1 tagą. Rezultatą atvaizduokite naršyklėje. -->
+
+   <h1 id="title">Initial Text</h1>
+
+   <script>
+      const insertTextIntoH1 = (text) => {
+         const h1Element = document.getElementById("title");
+         h1Element.innerText = text;
+      };
+
+      const newText = "New Text"; // Replace this with your desired text
+      insertTextIntoH1(newText);
+   </script>
+
+
+   <hr>
+
+   <script>
+      function insertTextIntoHTag(text, tagNumber) {
+         if (tagNumber < 1 || tagNumber > 6) {
+            document.write("Tag number must be between 1 and 6.");
+            return;
+         }
+
+         const simboliuSkaicius = text.length;
+         const tag = "h" + tagNumber;
+
+         document.write(`<${tag}>${text}</${tag}>`);
+
+      }
+
+      const ivestasTekstas = "This is a sample text."; // Enter your desired text here
+      const tagoNumeris = 1; // Choose the desired tag number (1-6)
+
+      insertTextIntoHTag(ivestasTekstas, tagoNumeris);
+   </script>
+
+   <hr>
+
+   <script>
+      const isPrime = (number) => {
+         if (number <= 1) {
+            return false; // Numbers less than or equal to 1 are not prime
+         }
+
+         if (number <= 3) {
+            return true; // Numbers 2 and 3 are prime
+         }
+
+         if (number % 2 === 0 || number % 3 === 0) {
+            return false; // Numbers divisible by 2 or 3 are not prime
+         }
+
+         for (let i = 5; i * i <= number; i += 6) {
+            if (number % i === 0 || number % (i + 2) === 0) {
+               return false; // Numbers divisible by i or i + 2 are not prime
+            }
+         }
+
+         return true; // If none of the conditions fail, the number is prime
+      }
+
+      const numberToCheck = 17; // Example with the number 17
+      const isPrimeNumber = isPrime(numberToCheck);
+      document.write(`Is ${numberToCheck} prime? ${isPrimeNumber}`);
+
+   </script>
+
+   <hr>
+
+   <h1>Array Content:</h1>
+   <div id="array-content"></div>
+
+   <script>
+      function generuotiAtsitiktiniusSkaicius(min, max) {
+         return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      const masyvas = Array.from({ length: 100 }, () => generuotiAtsitiktiniusSkaicius(997, 15991));
+
+      const arrayContentElement = document.getElementById("array-content");
+      arrayContentElement.textContent = masyvas.join(", "); // Display array content as a comma-separated string
+   </script>
+
+
+   <hr>
+
+   <h1>Prime Numbers Greater Than 5000:</h1>
+   <div id="prime-numbers"></div>
+
+   <script>
+      function generuotiAtsitiktiniusSkaicius(min, max) {
+         return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function arPirminis(number) {
+         if (number <= 1) {
+            return false;
+         }
+
+         if (number <= 3) {
+            return true;
+         }
+
+         if (number % 2 === 0 || number % 3 === 0) {
+            return false;
+         }
+
+         for (let i = 5; i * i <= number; i += 6) {
+            if (number % i === 0 || number % (i + 2) === 0) {
+               return false;
+            }
+         }
+
+         return true;
+      }
+
+      const arr = Array.from({ length: 100 }, () => generuotiAtsitiktiniusSkaicius(997, 15991));
+
+      const pirminiaiDidesniNei5000 = arr.filter(skaicius => arPirminis(skaicius) && skaicius > 5000);
+
+      const primeNumbersElement = document.getElementById("prime-numbers");
+      primeNumbersElement.textContent = pirminiaiDidesniNei5000.join(", "); // Display prime numbers as a comma-separated string
+   </script>
+
+
+</body>
+
+</html>

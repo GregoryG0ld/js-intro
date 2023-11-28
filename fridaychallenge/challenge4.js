@@ -3,10 +3,15 @@ console.clear();
 //1.Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus (Jonas Jonaitis). Atspausdinti trumpesnį stringą.
 
 const firstName = 'Robert';
-const middleName = 'Jr';
 const surName = 'Downey';
 
-console.log(`${firstName[0]} ${surName} ${middleName}`);
+if (firstName.length < surName.length) {
+   console.log(firstName);
+} else {
+   console.log(surName);
+}
+
+//console.log(`${firstName[0]} ${middleName}`);
 console.log('----------------------');
 //2.Sukurkite 4 kintamuosius, kurie saugotų jūsų vardą, pavardę, gimimo metus ir šiuos metus (nebūtinai tikrus). Parašykite kodą, kuris pagal gimimo metus paskaičiuotų jūsų amžių ir naudodamas vardo ir pavardės kintamuosius atspausdintų tokį sakinį: "Aš esu Vardenis Pavardenis. Man yra XX metai(ų)".
 
@@ -21,7 +26,7 @@ console.log(`Aš esu ${myName} ${mySurname}. Man yra ${age} metai(ų).`);
 console.log('----------------------');
 //3.Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš trijų paskutinių vardo ir pavardės kintamųjų raidžių. Jį atspausdinti.
 
-const n1 = 'Clint';
+const n1 = 'Clintasd';
 const n2 = 'Eastwood';
 
 // Method 1
@@ -42,7 +47,7 @@ const s1 = 'Once upon a time in hollywood';
 
 function replace(string) {
 
-   const toReplace = new RegExp('[o-oO-O]', 'g');
+   const toReplace = new RegExp('[oO]', 'g');
    const replacement = '*';
 
    return string.replace(toReplace, replacement);
@@ -86,7 +91,7 @@ let result = num5 > num6 ? num5 / num6 : num6 / num5;
 let resultRound = result.toFixed(2);
 
 console.log(resultRound);
-//console.log(num5, num6);
+console.log(num5, num6);
 
 console.log('----------------------');
 
@@ -151,5 +156,6 @@ function generateRandomString(length) {
    return randomString;
 }
 
-const randomString = generateRandomString(3);
+const randomString = generateRandomString(3
+);
 console.log(randomString);
